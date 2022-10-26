@@ -1,14 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <Layout>
-  <div>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-  </div>
+  <main class="region-content home">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+          <h1>
+            Are you looking for a new junior <span class="color">
+              graphic designer</span
+            >?
+          </h1>
+        </div>
+      </div>
+      <div class="column column-second">
+        <div class="field-body">
+          <p>
+            Don't look further! I'm available for an internship from august
+            2023.
+          </p>
+          <p><span class"me">Chiara Mendolia</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="region">
+      <div class="column column-first">
+        <p class="field-label">
+          <span>Works</span>
+        </p>
+
+        <h2>
+          Take
+          <br />
+          a look
+        </h2>
+      </div>
+      <div class="column column-second">
+        <div class="field-image">
+          <img src="placeholder.jpg" alt="" width="200" height="200" />
+        </div>
+      </div>
+      <div class="column column-third">
+        <Nav />
+      </div>
+    </div>
+  </main>
 </Layout>

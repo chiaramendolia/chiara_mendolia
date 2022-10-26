@@ -1,0 +1,78 @@
+@import url("https://use.typekit.net/rpd5byc.css");
+
+@import "fields/field-body";
+@import "fields/field-image";
+
+@import "regions/region-header";
+@import "regions/region-footer";
+@import "regions/region-nav";
+@import "regions/region-content";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 100%;
+  color: black;
+  font-family: "aktiv-grotesk"; //Arial, sans-serif
+}
+
+a {
+  font-family: "space-mono"; //monospace
+  text-decoration: none;
+}
+
+.wrapper {
+  @media all and (min-width: 768px) {
+    height: 100vh;
+    overflow: hidden;
+    .region-content,
+    .region-content > .region {
+      height: 100%;
+    }
+    .column {
+      overflow-y: scroll;
+      &.column-second {
+        // align-self: end;
+      }
+    }
+  }
+}
+
+.home .column.column-second {
+  padding: 3rem;
+}
+
+.region-content .region {
+  @media all and (min-width: 768px) {
+    display: flex;
+    > .column {
+      width: 50%;
+    }
+  }
+  > .column {
+    background-color: purple;
+    &.column-first {
+      padding: 3rem;
+    }
+  }
+}
+
+.region-content.works .region,
+.region-content.work .region,
+.region-content.contact .region {
+  flex-flow: row-reverse;
+}
+// font-family: Space Grotesk Regular;
