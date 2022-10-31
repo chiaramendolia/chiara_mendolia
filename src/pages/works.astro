@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+
+const posts = await Astro.glob('./works/*.mdx');
 ---
 
-<Layout>
+<Layout class="work" title="Works">
   <main class="region-content works">
     <div class="region">
       <div class="column column-first">
@@ -27,61 +30,19 @@ import Layout from "../layouts/Layout.astro";
       <div class="column colmun-second">
         <div class="field-list">
           <ul>
-            <li>
-              <div class="work-teaser">
-                <div class="field-image">
-                  <img src="placeholder.jpg" alt="" width="200" />
+            {posts.map(post => {
+              console.log(post.getHeadings)
+             return <li>
+                <div class="work-teaser">
+                  <div class="field-image">
+                    img src={post.thumb} width="200" height="200" /
+                  </div>
+                  <h2>{post.title}</h2>
+                  <time>{post.year}</time>
+                  <a href={post.url}>See {post.title}</a>
                 </div>
-                <h2>Title of project</h2>
-                <time>2022</time>
-                <a href="/work" title="See [Project name]">See [Project name]</a
-                >
-              </div>
-            </li>
-            <li>
-              <div class="work-teaser">
-                <div class="field-image">
-                  <img src="placeholder.jpg" alt="" width="200" height="200" />
-                </div>
-                <h2>Title of project</h2>
-                <time>2022</time>
-                <a href="/work" title="See [Project name]">See [Project name]</a
-                >
-              </div>
-            </li>
-            <li>
-              <div class="work-teaser">
-                <div class="field-image">
-                  <img src="placeholder.jpg" alt="" width="200" height="200" />
-                </div>
-                <h2>Title of project</h2>
-                <time>2022</time>
-                <a href="/work" title="See [Project name]">See [Project name]</a
-                >
-              </div>
-            </li>
-            <li>
-              <div class="work-teaser">
-                <div class="field-image">
-                  <img src="placeholder.jpg" alt="" width="200" height="200" />
-                </div>
-                <h2>Title of project</h2>
-                <time>2022</time>
-                <a href="/work" title="See [Project name]">See [Project name]</a
-                >
-              </div>
-            </li>
-            <li>
-              <div class="work-teaser">
-                <div class="field-image">
-                  <img src="placeholder.jpg" alt="" width="200" height="200" />
-                </div>
-                <h2>Title of project</h2>
-                <time>2022</time>
-                <a href="/work" title="See [Project name]">See [Project name]</a
-                >
-              </div>
-            </li>
+              </li>
+          })}
           </ul>
         </div>
       </div>

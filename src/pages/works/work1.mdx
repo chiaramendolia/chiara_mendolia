@@ -1,8 +1,12 @@
----
-import Layout from "../layouts/Layout.astro";
----
+export const title = "work 1";
+export const heading = "work 1";
+export const action = "work 1";
+export const year = "2022";
+export const thumb = "img.jpg";
 
-<Layout>
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
   <main class="region-content work">
     <div class="region">
       <div class="column column-first">
@@ -12,9 +16,7 @@ import Layout from "../layouts/Layout.astro";
           </p>
 
           <h1>
-            I'd like a bunch of carnivorous plants, please<span class="color"
-              >.</span
-            >
+            I'd like a bunch of carnivorous plants, please <span class="color">.</span>
           </h1>
           <time>2021</time>
           <div class="field-heading">
@@ -27,8 +29,8 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <p class="field-action">
             Did you like it ?<br />
-            <a href="mailto:chiara@mendolia.ch" title="Contact me"
-              ><span>Contact me now.</span>
+            <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
             </a>
           </p>
         </div>
@@ -50,5 +52,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
+
   </main>
 </Layout>
