@@ -1,4 +1,16 @@
+/* ------------------------------------------- fonts */
+
 @import url("https://use.typekit.net/rpd5byc.css");
+
+/* ------------------------------------------- fontface */
+
+@font-face {
+  font-family: "Tiny Font 160";
+  src: url("../../assets/fonts/tinyfont/TINY5x3-160.woff2") format("woff2"),
+    url("../../assets/fonts/tinyfont/TINY5x3-160.woff") format("woff");
+}
+
+/* ------------------------------------------- CSS */
 
 @import "fields/field-body";
 @import "fields/field-image";
@@ -7,6 +19,8 @@
 @import "regions/region-footer";
 @import "regions/region-nav";
 @import "regions/region-content";
+
+/* ------------------------------------------- resets */
 
 * {
   padding: 0;
@@ -19,6 +33,8 @@ li {
   list-style-type: none;
 }
 
+/* ------------------------------------------- html, body */
+
 html {
   font-size: 16px;
 }
@@ -26,53 +42,24 @@ html {
 body {
   font-size: 100%;
   color: black;
-  font-family: "aktiv-grotesk"; //Arial, sans-serif
+  font-family: "aktiv-grotesk", arial, sans-serif;
+  background-color: #e5e5e5;
 }
 
+/* ------------------------------------------- links */
+
 a {
-  font-family: "space-mono"; //monospace
+  font-family: "space-mono", monospace;
   text-decoration: none;
+  color: black;
 }
+
+/* ------------------------------------------- wrapper */
 
 .wrapper {
   @media all and (min-width: 768px) {
-    height: 100vh;
-    overflow: hidden;
-    .region-content,
-    .region-content > .region {
-      height: 100%;
-    }
     .column {
       overflow-y: scroll;
-      &.column-second {
-        // align-self: end;
-      }
     }
   }
 }
-
-.home .column.column-second {
-  padding: 3rem;
-}
-
-.region-content .region {
-  @media all and (min-width: 768px) {
-    display: flex;
-    > .column {
-      width: 50%;
-    }
-  }
-  > .column {
-    background-color: purple;
-    &.column-first {
-      padding: 3rem;
-    }
-  }
-}
-
-.region-content.works .region,
-.region-content.work .region,
-.region-content.contact .region {
-  flex-flow: row-reverse;
-}
-// font-family: Space Grotesk Regular;

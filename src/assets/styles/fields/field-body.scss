@@ -1,45 +1,88 @@
 $color: #ff53f8;
 
+.color {
+  color: $color;
+}
+
+.region-content:not(.home) .field-body h1:after {
+  content: ".";
+  color: $color;
+}
+
 .field-body {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    -webkit-border-bottom-right-radius: 50%;
+    -moz-border-radius-bottomright: 50%;
+    border-bottom-right-radius: 50%;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    position: absolute;
+    bottom: -3rem;
+    right: -3rem;
+  }
+  > *:not(:last-child) {
+    margin-bottom: 1em;
+  }
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-bottom: 1.5rem;
+    margin: 0;
     font-weight: normal;
-    line-height: 1.25em;
   }
 
   h1 {
-    font-size: 2.25rem;
-    font-family: "space-mono"; //Arial, sans-serif
+    font-size: 4.25rem;
+    line-height: 1em;
+    letter-spacing: -0.25rem;
+    font-family: "space-mono", arial, sans-serif;
+    margin-top: 0.5em;
   }
 
   h2 {
     font-size: 2rem;
+    margin-top: 1em;
   }
 
   h3 {
     font-size: 1.75rem;
+    margin-top: 1em;
   }
 
   h4 {
     font-size: 1.5rem;
+    margin-top: 1em;
   }
 
   h5 {
     font-size: 1.25rem;
+    margin-top: 1em;
   }
 
   h6 {
     font-size: 1rem;
+    margin-top: 1em;
   }
 
   p {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    line-height: 1.5em;
+  }
+
+  p.field-heading {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+  }
+
+  .field-action {
+    font-size: 1.25rem;
     line-height: 1.5em;
   }
 
@@ -50,13 +93,43 @@ $color: #ff53f8;
   a {
     color: $color;
   }
+
+  ol,
+  ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    li {
+      font-size: 1.25rem;
+      line-height: 1.5em;
+    }
+    li:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  ol li {
+    list-style-type: decimal;
+  }
+  ul li {
+    list-style-type: circle;
+  }
+
+  .field-label {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+  }
+
+  .me {
+    font-family: "Tiny Font 160";
+    text-transform: uppercase;
+    font-size: 2.5rem;
+  }
 }
 
-.region-content:not(.home) .field-body h1:after {
-  content: ".";
-  color: $color;
-}
-
-.color {
-  color: $color;
+.home {
+  .field-body {
+    h1 {
+      color: blue;
+    }
+  }
 }

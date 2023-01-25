@@ -1,7 +1,8 @@
 .region-nav {
-  background-color: red;
+  background-color: rgb(172, 172, 172);
   position: absolute;
   right: 0;
   top: 50%;
   padding: 1rem;
+  z-index: 10000000000;
 }
