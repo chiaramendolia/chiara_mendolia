@@ -46,7 +46,6 @@ const posts = await Astro.glob("./works/*.mdx");
           <ul>
             {
               posts.map((post) => {
-                console.log(post.getHeadings);
                 return (
                   <li>
                     <div class="work-teaser">
