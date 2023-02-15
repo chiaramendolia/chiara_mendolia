@@ -9,22 +9,24 @@
 
 .field-body {
   position: relative;
-  &:after {
-    content: "";
-    display: block;
-    width: 12rem;
-    height: 12rem;
-    -webkit-border-bottom-right-radius: 50%;
-    -moz-border-radius-bottomright: 50%;
-    border-bottom-right-radius: 50%;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    position: absolute;
-    bottom: -3rem;
-    right: -3rem;
+  @media all and (min-width: 768px) {
+    &:after {
+      content: "";
+      display: block;
+      width: 12rem;
+      height: 12rem;
+      -webkit-border-bottom-right-radius: 50%;
+      -moz-border-radius-bottomright: 50%;
+      border-bottom-right-radius: 50%;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      position: absolute;
+      bottom: -3rem;
+      right: -3rem;
+    }
   }
   > *:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: 1.5rem;
   }
   h1,
   h2,
@@ -37,36 +39,67 @@
   }
 
   h1 {
-    font-size: 4.25rem;
     line-height: 1em;
     letter-spacing: -0.25rem;
     font-family: "space-mono", arial, sans-serif;
     margin-top: 0.5em;
+    @media all and (max-width: 1199px) {
+      font-size: 3.25rem;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 4.25rem;
+    }
   }
 
   h2 {
-    font-size: 2rem;
     margin-top: 1em;
+    @media all and (max-width: 1199px) {
+      font-size: 1.75rem;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 2rem;
+    }
   }
 
   h3 {
-    font-size: 1.75rem;
     margin-top: 1em;
+    @media all and (max-width: 1199px) {
+      font-size: 1.5rem;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 1.75rem;
+    }
   }
 
   h4 {
-    font-size: 1.5rem;
     margin-top: 1em;
+    @media all and (max-width: 1199px) {
+      font-size: 1.25rem;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 1.5rem;
+    }
   }
 
   h5 {
-    font-size: 1.25rem;
     margin-top: 1em;
+    @media all and (max-width: 1199px) {
+      font-size: 1.125rem;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 1.25rem;
+    }
   }
 
   h6 {
     font-size: 1rem;
     margin-top: 1em;
+    @media all and (max-width: 1199px) {
+      font-size: 0.9rem;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 1rem;
+    }
   }
 
   p {
@@ -74,14 +107,18 @@
     line-height: 1.5em;
   }
 
-  p.field-heading {
-    font-size: 1.25rem;
-    line-height: 1.5em;
+  .field-heading {
+    p {
+      font-size: 1.25rem;
+      line-height: 1.5em;
+    }
   }
 
   .field-action {
-    font-size: 1.25rem;
-    line-height: 1.5em;
+    p {
+      font-size: 1.25rem;
+      line-height: 1.5em;
+    }
   }
 
   small {
@@ -113,6 +150,13 @@
   }
 
   .field-label {
+    opacity: 0.25;
+    font-size: 1.25rem;
+    line-height: 1.5em;
+  }
+
+  .field-time {
+    opacity: 0.25;
     font-size: 1.25rem;
     line-height: 1.5em;
   }
@@ -129,16 +173,26 @@
   .field-body {
     h1 {
       color: black;
-      font-size: 4.75rem;
       line-height: 1.1em;
+      @media all and (max-width: 1199px) {
+        font-size: 3.75rem;
+      }
+      @media all and (min-width: 1200px) {
+        font-size: 4.75rem;
+      }
     }
   }
 
   .column-second {
     .field-body {
       p {
-        font-size: 1.25rem;
         padding-bottom: 3rem;
+        @media all and (max-width: 1199px) {
+          font-size: 1.125rem;
+        }
+        @media all and (min-width: 1200px) {
+          font-size: 1.25rem;
+        }
       }
     }
   }

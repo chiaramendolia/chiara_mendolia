@@ -9,11 +9,13 @@ const posts = await Astro.glob("./works/*.mdx");
     <div class="region">
       <div class="column column-first">
         <div class="field-body">
-          <p class="field-label">
+          <div class="field-label">
             <span>Works</span>
-          </p>
+          </div>
           <h1>My first steps into graphic design</h1>
-          <p class="field-heading">Downloading...</p>
+          <div class="field-heading">
+            <p>Downloading...</p>
+          </div>
           <p>
             During my 2 years in eracom, I learnt a lot about swiss graphic
             design. You can see down below some graphic composition I’ve done. I
@@ -25,18 +27,18 @@ const posts = await Astro.glob("./works/*.mdx");
             direction.
           </p>
 
-          <p class="field-heading">
-            Branding. Illustration. Photography. Graphic composition.
-          </p>
+          <div class="field-heading">
+            <p>Branding. Illustration. Photography. Graphic composition.</p>
+          </div>
 
-          <p class="field-action">
-            <>
+          <div class="field-action">
+            <p>
               <a href="/contact">Contact me now.</a>
               <br />
-            </>
+            </p>
             Or see my works
             <a href="/works" title=""> here</a>
-          </p>
+          </div>
         </div>
       </div>
       <div class="column colmun-second">
@@ -48,12 +50,18 @@ const posts = await Astro.glob("./works/*.mdx");
                 return (
                   <li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src={post.thumb} width="200" height="200" />
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src={post.thumb} width="200" height="200" />
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>{post.title}</h2>
+                          <time>{post.year}</time>
+                          <a href={post.url}>See this work</a>
+                        </div>
                       </div>
-                      <h2>{post.title}</h2>
-                      <time>{post.year}</time>
-                      <a href={post.url}>See this work</a>
                     </div>
                   </li>
                 );

@@ -1,5 +1,16 @@
 .region-header {
-  height: 6rem;
+  @media all and (max-width: 767px) {
+    height: 4.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #e5e5e5;
+  }
+  @media all and (min-width: 768px) {
+    height: 6rem;
+  }
   .region {
     display: flex;
     > *:nth-child(1) {
@@ -7,8 +18,17 @@
     }
 
     > *:nth-child(2) {
-      width: calc(100% - 6rem);
+      @media all and (max-width: 767px) {
+        width: calc(100% - 4.5rem);
+      }
+      @media all and (min-width: 768px) {
+        width: calc(100% - 6rem);
+      }
     }
+  }
+  @media all and (max-width: 767px) {
+    border-bottom: 1px solid black;
+    padding-right: 6rem;
   }
 }
 
@@ -35,18 +55,34 @@
         display: flex;
         align-items: center;
         padding: 1rem;
-        min-height: 6rem;
+        @media all and (max-width: 767px) {
+          min-height: 4.5rem;
+        }
+        @media all and (min-width: 768px) {
+          min-height: 6rem;
+        }
         &.icon::before {
           content: "";
           display: block;
-          width: 3rem;
-          height: 3rem;
+          @media all and (max-width: 767px) {
+            width: 2.25rem;
+            height: 2.25rem;
+          }
+          @media all and (min-width: 768px) {
+            width: 3rem;
+            height: 3rem;
+          }
         }
         &.icon-mail::before {
           background-image: url(/src/assets/icons/portfolio-icone-mail.svg);
         }
         &.icon-phone::before {
           background-image: url(/src/assets/icons/portfolio-icone-phone.svg);
+        }
+        @media all and (max-width: 767px) {
+          > span {
+            display: none;
+          }
         }
       }
     }

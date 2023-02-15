@@ -39,6 +39,7 @@ li {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,9 +60,43 @@ a {
 /* ------------------------------------------- wrapper */
 
 .wrapper {
+  position: relative;
+  @media all and (max-width: 767px) {
+    padding-top: 4.5rem;
+  }
   @media all and (min-width: 768px) {
     .column {
       overflow-y: scroll;
     }
+  }
+}
+
+a {
+  transition: color 500ms ease 0s;
+}
+
+.field-list {
+  padding: 1.5rem;
+  ul {
+    > * {
+      padding: 1.5rem;
+    }
+    @media all and (max-width: 639px) {
+      top: calc(4.5rem - 1px);
+    }
+    @media all and (min-width: 640px) {
+      display: flex;
+      flex-flow: row wrap;
+      > * {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.field-images {
+  img {
+    width: 100%;
+    height: auto;
   }
 }

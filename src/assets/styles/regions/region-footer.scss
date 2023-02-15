@@ -1,13 +1,33 @@
 .region-footer {
   position: absolute;
   bottom: 0;
-  right: 0;
-  padding: 1rem;
+  right: 6rem;
+  padding: 0.5rem 0.5rem;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  height: 6rem;
+
+  .region {
+    display: flex;
+    > * {
+      padding: 0 0.5rem;
+    }
+  }
+
+  a {
+    color: $color;
+  }
 
   .block-back-top,
   .block-copyright {
-    a {
-      color: $color;
+    text-align: right;
+    small {
+      font-size: 0.7rem;
+    }
+  }
+  @media all and (min-width: 768px) {
+    .block-back-top {
+      display: none;
     }
   }
 }

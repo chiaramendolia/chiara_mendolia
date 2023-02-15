@@ -1,14 +1,27 @@
 .region-content .region {
-  @media all and (min-width: 768px) {
-    display: flex;
+  display: flex;
+  @media all and (max-width: 999px) {
+    flex-direction: column;
+  }
+  @media all and (min-width: 1000px) {
+    flex-direction: row;
     > .column {
       width: 50%;
     }
   }
   > .column {
-    height: calc(100vh - 6rem);
+    @media all and (max-width: 999px) {
+    }
+    @media all and (min-width: 1000px) {
+      height: calc(100vh - 6rem);
+    }
     &.column-first {
-      padding: 6rem;
+      @media all and (max-width: 767px) {
+        padding: 3rem;
+      }
+      @media all and (min-width: 768px) {
+        padding: 6rem;
+      }
     }
   }
 }
@@ -18,62 +31,84 @@
 .region-content.works .region,
 .region-content.work .region,
 .region-content.contact .region {
-  flex-flow: row-reverse;
+  @media all and (min-width: 1000px) {
+    flex-flow: row-reverse;
+  }
+}
+
+/* ------------------------------------------- mobile */
+.region-content.contact .region,
+.region-content.about .region,
+.region-content.legals .region {
+  @media all and (max-width: 999px) {
+    flex-flow: column-reverse;
+  }
 }
 
 /* ------------------------------------------- specific for home */
 
-.home .column.column-second {
-  padding: 3rem;
+.home {
+  .column.column-second {
+    @media all and (max-width: 767px) {
+      padding: 3rem;
+    }
+    @media all and (min-width: 768px) {
+      padding: 6rem;
+    }
+  }
 }
 
 /* ------------------------------------------- background image */
 
-.field-image {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    height: 50%;
-    position: absolute;
-    left: 0;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    z-index: -1;
-    -webkit-border-top-right-radius: 6rem;
-    -moz-border-radius-topright: 6rem;
-    border-top-right-radius: 6rem;
-    background-color: #e5e5e5;
-  }
-  &:before {
-    bottom: 1.5rem;
-    width: calc(100% - 4.5rem);
-    z-index: -1;
-  }
-  &:after {
-    bottom: 3rem;
-    width: calc(100% - 9rem);
-    z-index: -2;
-  }
-
-  .background {
+.region-content.contact .region,
+.region-content.about .region,
+.region-content.legals .region {
+  .field-image {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &::before,
     &::after {
       content: "";
       display: block;
-      width: 100%;
       height: 50%;
       position: absolute;
-      bottom: 0;
       left: 0;
-      background-color: white;
+      border-top: 1px solid black;
+      border-right: 1px solid black;
       z-index: -1;
       -webkit-border-top-right-radius: 6rem;
       -moz-border-radius-topright: 6rem;
       border-top-right-radius: 6rem;
+      background-color: #e5e5e5;
+    }
+    &:before {
+      bottom: 1.5rem;
+      width: calc(100% - 4.5rem);
+      z-index: -1;
+    }
+    &:after {
+      bottom: 3rem;
+      width: calc(100% - 9rem);
+      z-index: -2;
+    }
+
+    .background {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        z-index: -1;
+        -webkit-border-top-right-radius: 6rem;
+        -moz-border-radius-topright: 6rem;
+        border-top-right-radius: 6rem;
+      }
     }
   }
 }

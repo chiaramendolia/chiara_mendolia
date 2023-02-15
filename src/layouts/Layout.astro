@@ -9,7 +9,7 @@ export interface Props {
   className: string;
 }
 
-const { title, class:className } = Astro.props;
+const { title, class: className } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -27,6 +27,19 @@ const { title, class:className } = Astro.props;
       <Header />
       <nav class="region-nav">
         <div class="region">
+          <input type="checkbox" id="toggleMenu" />
+          <label for="toggleMenu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 170.07874 170.07874"
+              width="60"
+              height="60"
+            >
+              <path
+                d="m76.68648,77.00907h-28.36389v-28.36389h28.36389v28.36389Zm45.06967-28.36389h-28.36389v28.36389h28.36389v-28.36389Zm-45.06967,44.42449h-28.36389v28.36389h28.36389v-28.36389Z"
+              ></path>
+            </svg>
+          </label>
           <Nav />
         </div>
       </nav>

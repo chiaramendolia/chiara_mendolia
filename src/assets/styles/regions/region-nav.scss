@@ -1,8 +1,107 @@
-.region-nav {
-  background-color: rgb(172, 172, 172);
-  position: absolute;
+#toggleMenu {
+  display: none;
+}
+
+#toggleMenu ~ label {
+  display: block;
+  background-color: white;
+  position: fixed;
+  z-index: 5000;
+  cursor: pointer;
+  @media all and (max-width: 767px) {
+    top: 0;
+    right: 1.5rem;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    -webkit-border-bottom-right-radius: 1.5rem;
+    -webkit-border-bottom-left-radius: 1.5rem;
+    -moz-border-radius-bottomright: 1.5rem;
+    -moz-border-radius-bottomleft: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    @media all and (max-width: 767px) {
+      width: 5.25rem;
+      height: 5.25rem;
+    }
+    @media all and (min-width: 768px) {
+      width: 7.5rem;
+      height: 7.5rem;
+    }
+  }
+  @media all and (min-width: 768px) {
+    top: calc(30% + 3rem);
+    right: 0;
+    transition: right 500ms ease 0s;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    -webkit-border-top-left-radius: 1.5rem;
+    -webkit-border-bottom-left-radius: 1.5rem;
+    -moz-border-radius-topleft: 1.5rem;
+    -moz-border-radius-bottomleft: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    * {
+      fill: $color;
+    }
+  }
+}
+
+#toggleMenu:checked ~ label {
+  @media all and (max-width: 767px) {
+  }
+  @media all and (min-width: 768px) {
+    right: 20rem;
+  }
+}
+
+.block-menu {
+  width: 20rem;
+  padding: 1.5rem;
+  position: fixed;
+  z-index: 2500;
+  right: -20rem;
+  background-color: white;
+  -webkit-border-top-left-radius: 3rem;
+  -webkit-border-bottom-left-radius: 3rem;
+  -moz-border-radius-topleft: 3rem;
+  -moz-border-radius-bottomleft: 3rem;
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  transition: right 500ms ease 0s;
+  @media all and (max-width: 767px) {
+    top: calc(4.5rem - 1px);
+  }
+  @media all and (min-width: 768px) {
+    top: 30%;
+  }
+  ul {
+    li {
+      a {
+        display: block;
+        padding: 1.5rem;
+        color: black;
+
+        &:hover {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+#toggleMenu:checked ~ .block-menu {
+  display: block;
   right: 0;
-  top: 50%;
-  padding: 1rem;
-  z-index: 10000000000;
 }
