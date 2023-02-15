@@ -1,0 +1,57 @@
+export const title = "Thank you,Happy Birthday";
+export const year = "2022";
+export const thumb = "masque-teaser.jpg";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <p class="field-label">
+            <span>Work</span>
+          </p>
+
+          <h1>
+             {title}
+          </h1>
+
+          <p><time>{year}</time></p>
+
+          <p class="field-heading">
+            Fictive recover of the album Thank you, Happy Birthday of Cage the Elephant.
+
+</p>
+The album was built on the purpose to be a bunch of all kind of rock and folk offers by the group. Indeed Cage the Elephant compose many songs which are all unique in their gender. Our ears can meet psychedelic and suddently discover alternative rock and then an indie soft folk song. 
+I’ve chose to show that patchwork effect as an colourful and desorganised
+
+          <p class="field-action">
+            Did you like it ?
+            <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, vue de dessus" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

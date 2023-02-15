@@ -1,0 +1,59 @@
+export const title = "Carte en poche";
+export const year = "2022";
+export const thumb = "masque-teaser.jpg";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <p class="field-label">
+            <span>Work</span>
+          </p>
+
+          <h1>
+             {title}
+          </h1>
+
+          <p><time>{year}</time></p>
+
+          <p class="field-heading">
+            Pocket card in french was an fictive city card creation
+
+</p>
+We had to chose 3 places we wanted to make it dicover for tourists in Lausanne. I chose to located 3 dog parks near to the Leman lake.
+Living in countryside with my dog I’ve always thought that dog parks are the only way for the city dog to be free and to really meet others dogs, which make me feel sad by the way. Making better known that places was a really warmful thing for me to do. 
+I illustrate each dogs myself trying to compose a after a ball dog race. 
+I used the color of yellow gold and petrol green to pick up the poop bags’s color in Swizerland.
+
+          <p class="field-action">
+            Did you like it ?
+            <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, vue de dessus" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

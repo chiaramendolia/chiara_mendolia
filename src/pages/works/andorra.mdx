@@ -1,0 +1,59 @@
+export const title = "Andorra";
+export const year = "2022";
+export const thumb = "masque-teaser.jpg";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <p class="field-label">
+            <span>Work</span>
+          </p>
+
+          <h1>
+             {title}
+          </h1>
+
+          <p><time>{year}</time></p>
+
+          <p class="field-heading">
+            Hurry up, tickets still available!
+
+</p>
+The challenge of this fictive play announcement’s poster was to dive into the art movement Fonctional Objective Typography. 
+That time of the art world is described by typography composition which built all the poster. That movement used impactful and meaningful typefaces. 
+The dramatic play of Max Frisch, tell the story of a young jewish guy who is discriminates by the others that won’t find any solution than suicide. 
+I tried to show injustice, loneliness and strengh.
+
+          <p class="field-action">
+            Did you like it ?
+            <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, vue de dessus" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/masque-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>
