@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <meta name="generator" content="Astro v2.0.11">
     <title>My first steps into graphic design</title>
-  <link rel="stylesheet" href="/_astro/about.ffb1bc88.css" /></head>
+  <link rel="stylesheet" href="/_astro/about.ab9a2aea.css" /></head>
   <body>
     <span id="top"></span>
     <div class="wrapper">
@@ -19,11 +19,13 @@
       <ul>
         <li>
           <a href="mailto:chiara@mendolia.ch" title="Write me" class="icon icon-mail">
-            chiara<span class="color">@</span>mendolia.ch</a>
+            <span class="icon-label">chiara<span class="color">@</span>mendolia.ch</span>
+          </a>
         </li>
         <li>
           <a href="tel:+41788629787" title="Call me" class="icon icon-phone">
-            <span class="color">+41</span> 78 862 97 87</a>
+            <span class="icon-label"><span class="color">+41</span> 78 862 97 87</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -31,22 +33,22 @@
 </header>
       <nav class="region-nav">
         <div class="region">
+          <input type="checkbox" id="toggleMenu">
+          <label for="toggleMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.07874 170.07874" width="60" height="60">
+              <path d="m76.68648,77.00907h-28.36389v-28.36389h28.36389v28.36389Zm45.06967-28.36389h-28.36389v28.36389h28.36389v-28.36389Zm-45.06967,44.42449h-28.36389v28.36389h28.36389v-28.36389Z"></path>
+            </svg>
+          </label>
           <div class="block-menu">
   <ul>
     <li>
-      <a href="/works" title="My works">
-        <span class="color">Works</span>
-      </a>
+      <a href="/works" title="My works"> Works</a>
     </li>
     <li>
-      <a href="/about" title="About me">
-        <span class="color">About</span>
-      </a>
+      <a href="/about" title="About me"> About</a>
     </li>
     <li>
-      <a href="/contact" title="Contact me">
-        <span class="color">Contact</span>
-      </a>
+      <a href="/contact" title="Contact me"> Contact</a>
     </li>
   </ul>
 </div>
@@ -57,11 +59,13 @@
     <div class="region">
       <div class="column column-first">
         <div class="field-body">
-          <p class="field-label">
+          <div class="field-label">
             <span>Works</span>
-          </p>
+          </div>
           <h1>My first steps into graphic design</h1>
-          <p class="field-heading">Downloading...</p>
+          <div class="field-heading">
+            <p>Downloading...</p>
+          </div>
           <p>
             During my 2 years in eracom, I learnt a lot about swiss graphic
             design. You can see down below some graphic composition I’ve done. I
@@ -73,15 +77,18 @@
             direction.
           </p>
 
-          <p class="field-heading">
-            Branding. Illustration. Photography. Graphic composition.
-          </p>
+          <div class="field-heading">
+            <p>Branding. Illustration. Photography. Graphic composition.</p>
+          </div>
 
-          <p class="field-action">
-            <a href="/contact">Contact me now.</a><br>
+          <div class="field-action">
+            <p>
+              <a href="/contact">Contact me now.</a>
+              <br>
+            </p>
             Or see my works
             <a href="/works" title=""> here</a>
-          </p>
+          </div>
         </div>
       </div>
       <div class="column colmun-second">
@@ -89,93 +96,153 @@
           <ul>
             <li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="VI-teaser02.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="vi-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>VI</h2>
+                          <time>2022</time>
+                          <a href="/works/VI">See this work</a>
+                        </div>
                       </div>
-                      <h2>VI</h2>
-                      <time>2022</time>
-                      <a href="/works/VI">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="andorra-teaser02.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="andorra-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Andorra</h2>
+                          <time>2022</time>
+                          <a href="/works/andorra">See this work</a>
+                        </div>
                       </div>
-                      <h2>Andorra</h2>
-                      <time>2022</time>
-                      <a href="/works/andorra">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="carnivorous-plants-teaser01.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="carnivorous-plants-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>A bunch of carnivorous plants, please</h2>
+                          <time>2021</time>
+                          <a href="/works/carnivorous-plants">See this work</a>
+                        </div>
                       </div>
-                      <h2>A bunch of carnivorous plants, please</h2>
-                      <time>2021</time>
-                      <a href="/works/carnivorous-plants">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="terre-teaser02.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="ceramic-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Ceramic</h2>
+                          <time>2021</time>
+                          <a href="/works/ceramic">See this work</a>
+                        </div>
                       </div>
-                      <h2>Ceramic</h2>
-                      <time>2021</time>
-                      <a href="/works/ceramic">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="chiara-chocolate-teaser01.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="chiara-chocolat-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Chiara Chocolate</h2>
+                          <time>2022</time>
+                          <a href="/works/chiara-chocolat">See this work</a>
+                        </div>
                       </div>
-                      <h2>Chiara Chocolate</h2>
-                      <time>2022</time>
-                      <a href="/works/chiara-chocolat">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="chronophage-teaser.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="chronophage-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Chronophage</h2>
+                          <time>2022</time>
+                          <a href="/works/chronophage">See this work</a>
+                        </div>
                       </div>
-                      <h2>Chronophage</h2>
-                      <time>2022</time>
-                      <a href="/works/chronophage">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="figures-teaser02.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="figures-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Figures</h2>
+                          <time>2022</time>
+                          <a href="/works/figures">See this work</a>
+                        </div>
                       </div>
-                      <h2>Figures</h2>
-                      <time>2022</time>
-                      <a href="/works/figures">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="mask-teaser01.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="mask-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Futuristic houswives</h2>
+                          <time>2022</time>
+                          <a href="/works/mask">See this work</a>
+                        </div>
                       </div>
-                      <h2>Futuristic houswives</h2>
-                      <time>2022</time>
-                      <a href="/works/mask">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="scantatu-teaser02.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="scantatu-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Scantatu</h2>
+                          <time>2022</time>
+                          <a href="/works/scantatu">See this work</a>
+                        </div>
                       </div>
-                      <h2>Scantatu</h2>
-                      <time>2022</time>
-                      <a href="/works/scantatu">See this work</a>
                     </div>
                   </li><li>
                     <div class="work-teaser">
-                      <div class="field-image">
-                        <img src="TYHB-teaser01.jpg" width="200" height="200">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img src="thankyouhappybirthday-01-designed-by-chiara-mendolia.png" width="200" height="200">
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>Thank you,Happy Birthday</h2>
+                          <time>2022</time>
+                          <a href="/works/thankyouhappybirthday">See this work</a>
+                        </div>
                       </div>
-                      <h2>Thank you,Happy Birthday</h2>
-                      <time>2022</time>
-                      <a href="/works/thankyouhappybirthday">See this work</a>
                     </div>
                   </li>
           </ul>
