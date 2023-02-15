@@ -1,0 +1,79 @@
+export const title = "Ceramic";
+export const year = "2021";
+export const thumb = "terre-teaser02.jpg";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <p class="field-label">
+            <span>Work</span>
+          </p>
+
+          <h1>
+             {title}
+          </h1>
+
+          <p><time>{year}</time></p>
+
+          <p class="field-heading">
+
+          </p>
+
+
+          <p class="field-action">
+            Did you like it ?
+            <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, vue de dessus" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/terre-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

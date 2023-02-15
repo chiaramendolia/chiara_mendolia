@@ -1,0 +1,67 @@
+export const title = "VI";
+export const year = "2022";
+export const thumb = "VI-teaser02.jpg";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <p class="field-label">
+            <span>Work</span>
+          </p>
+
+          <h1>
+             {title}
+          </h1>
+
+          <p><time>{year}</time></p>
+
+          <p class="field-heading">
+            Collagen organic drinks line
+
+</p>
+VI offers flavoured canned lemonade with organic collagen for harden your skin, your hair and your mind. 
+Fictive conception of a can packaging. The branding guideline was about to create a line of drinks based on a word we picked by chance. Mine was 'rugged'. I create the logo, the brand identity and the packaging of the can and their transport boxes.
+          <p class="field-action">
+            Did you like it ?
+            <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/VI-05.jpg" alt="Masque, vue de dessus" width="960" height="960" />
+            </li>
+
+            <li>
+              <img src="/VI-02.jpg" alt="Masque, zoom" width="960" height="960" />
+            </li>
+             <li>
+              <img src="/VI-04.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/VI-03.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+             <li>
+              <img src="/VI-01.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+             <li>
+              <img src="/VI-06.jpg" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

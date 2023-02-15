@@ -119,6 +119,7 @@
 
   .me {
     font-family: "Tiny Font 160";
+    font-size: 2rem;
     text-transform: uppercase;
     font-size: 2.5rem;
   }
@@ -127,7 +128,18 @@
 .home {
   .field-body {
     h1 {
-      color: blue;
+      color: black;
+      font-size: 4.75rem;
+      line-height: 1.1em;
+    }
+  }
+
+  .column-second {
+    .field-body {
+      p {
+        font-size: 1.25rem;
+        padding-bottom: 3rem;
+      }
     }
   }
 }
