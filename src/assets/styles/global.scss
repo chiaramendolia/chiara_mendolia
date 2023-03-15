@@ -79,7 +79,7 @@ a {
   padding: 1.5rem;
   ul {
     > * {
-      padding: 1.5rem;
+      padding: 0.25rem;
     }
     @media all and (max-width: 639px) {
       top: calc(4.5rem - 1px);
@@ -94,9 +94,45 @@ a {
   }
 }
 
+.home {
+  .field-list {
+    padding: 1.5rem;
+    ul {
+      > * {
+        padding: 0.25rem;
+      }
+      @media all and (max-width: 479px) {
+        top: calc(4.5rem - 1px);
+      }
+      @media all and (min-width: 480px) and (max-width: 639px) {
+        display: flex;
+        flex-flow: row wrap;
+        > * {
+          width: 50%;
+        }
+      }
+      @media all and (min-width: 640px) and (max-width: 999px) {
+        display: flex;
+        flex-flow: row wrap;
+        > * {
+          width: 33%;
+        }
+      }
+      @media all and (min-width: 1000px) {
+        display: flex;
+        flex-flow: row wrap;
+        > * {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
+
 .field-images {
   img {
     width: 100%;
     height: auto;
+    display: block;
   }
 }

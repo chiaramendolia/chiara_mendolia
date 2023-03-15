@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
+
+const posts = await Astro.glob("./works/*.mdx");
 ---
 
 <Layout class="home" title="Chiara Mendolia">
@@ -17,7 +19,7 @@ import Nav from "../components/Nav.astro";
       <div class="column column-second">
         <div class="field-body">
           <p>
-            Don't look further!
+            <strong>Don't look further!</strong>
             <br />I'm available for an internship
             <br /> from august 2023.
           </p>
@@ -26,25 +28,37 @@ import Nav from "../components/Nav.astro";
       </div>
     </div>
 
-    <div class="region">
-      <div class="column column-first">
-        <p class="field-label">
-          <span>Works</span>
-        </p>
-
-        <h2>
-          Take
-          <br />
-          a look
-        </h2>
-      </div>
-      <div class="column column-second">
-        <div class="field-image">
-          <img src="placeholder.jpg" alt="" width="200" height="200" />
-        </div>
-      </div>
-      <div class="column column-third">
-        <Nav />
+    <div class="region no-flex">
+      <div class="field-list">
+        <ul>
+          {
+            posts.map((post) => {
+              return (
+                <li>
+                  <div class="work-teaser">
+                    <div class="layout">
+                      <div class="layout_image">
+                        <div class="field-image">
+                          <img
+                            src={post.thumb}
+                            width="200"
+                            height="200"
+                            alt="Teaser of : post.title"
+                          />
+                        </div>
+                      </div>
+                      <div class="layout_content">
+                        <h2>{post.title}</h2>
+                        <time>{post.year}</time>
+                        <a href={post.url}>See this work</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              );
+            })
+          }
+        </ul>
       </div>
     </div>
   </main>

@@ -52,13 +52,20 @@ const posts = await Astro.glob("./works/*.mdx");
                       <div class="layout">
                         <div class="layout_image">
                           <div class="field-image">
-                            <img src={post.thumb} width="200" height="200" />
+                            <img
+                              src={post.thumb}
+                              width="200"
+                              height="200"
+                              alt="Teaser of project : post.title"
+                            />
                           </div>
                         </div>
                         <div class="layout_content">
                           <h2>{post.title}</h2>
                           <time>{post.year}</time>
-                          <a href={post.url}>See this work</a>
+                          <a href={post.url} title="See this work">
+                            See this work
+                          </a>
                         </div>
                       </div>
                     </div>

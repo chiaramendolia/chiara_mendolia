@@ -1,4 +1,4 @@
-.region-content .region {
+.region-content .region:not(.no-flex) {
   display: flex;
   @media all and (max-width: 999px) {
     flex-direction: column;
@@ -26,6 +26,25 @@
   }
 }
 
+.column {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 100px rgba(#000000, 0.1);
+    border-radius: 15px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color;
+    border-radius: 15px;
+  }
+}
+
 /* ------------------------------------------- reverse */
 
 .region-content.works .region,
@@ -48,12 +67,47 @@
 /* ------------------------------------------- specific for home */
 
 .home {
+  .column.column-first {
+    .field-body:after {
+      display: none;
+    }
+  }
   .column.column-second {
     @media all and (max-width: 767px) {
       padding: 3rem;
     }
     @media all and (min-width: 768px) {
       padding: 6rem;
+    }
+    @media all and (min-width: 768px) and (max-width: 999px) {
+      padding-top: 0;
+    }
+    @media all and (min-width: 1000px) {
+      padding-top: 45vh;
+    }
+  }
+
+  .region-content .region:not(.no-flex) {
+    > .column {
+      @media all and (min-width: 1000px) {
+        height: auto;
+      }
+    }
+  }
+
+  .layout-header {
+    text-align: center;
+    h2 {
+      line-height: 1em;
+      letter-spacing: -0.25rem;
+      font-family: "space-mono", arial, sans-serif;
+      margin-top: 0.5em;
+      @media all and (max-width: 1199px) {
+        font-size: 3.25rem;
+      }
+      @media all and (min-width: 1200px) {
+        font-size: 4.25rem;
+      }
     }
   }
 }
