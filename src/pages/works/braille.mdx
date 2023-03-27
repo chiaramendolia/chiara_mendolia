@@ -1,0 +1,64 @@
+export const title = "Braille";
+export const year = "2021";
+export const thumb = "teaser-braille-designed-by-chiara-mendolia.png";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <div class="field-label">
+            <span>Work</span>
+          </div>
+
+          <h1>
+             {title}
+          </h1>
+
+          <div class="field-time"><time>{year}</time></div>
+
+          <div class="field-heading">
+            Experimental posters creation
+          </div>
+
+          <div>
+            The exercice was about to create a graphic compostion based on the braille language. This
+          </div>
+
+          <div class="field-action">
+            Did you like it ?
+            <p>
+              <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+              </a>
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/braille-01-designed-by-chiara-mendolia.png" alt="Masque, vue de dessus" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/braille-02-designed-by-chiara-mendolia.png" alt="Masque, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/braille-03-designed-by-chiara-mendolia.png" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+             <li>
+              <img src="/braille-04-designed-by-chiara-mendolia.png" alt="Masque, vue de coté" width="960" height="960" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>
