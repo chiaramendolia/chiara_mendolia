@@ -53,7 +53,7 @@ const posts = await Astro.glob("./works/*.mdx");
                         <div class="layout_image">
                           <div class="field-image">
                             <img
-                              src={post.thumb}
+                              src={"/"+post.thumb}
                               width="200"
                               height="200"
                               alt="Teaser of project : post.title"
