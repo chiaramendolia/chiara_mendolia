@@ -1,0 +1,74 @@
+export const title = "Horoscope";
+export const year = "2022";
+export const thumb = "teaser-horoscope-designed-by-chiara-mendolia.png";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <div class="field-label">
+            <span>Work</span>
+          </div>
+
+          <h1>
+             {title}
+          </h1>
+
+          <div class="field-time"><time>{year}</time></div>
+
+          <div class="field-heading">
+          Sploush.
+          </div>
+
+          <div>
+         Horoscope is an illustrative and composition work on the theme of astrology. Through the app Procreate, I’ve realised a series of three digital illustrations that represent the Water category of the Zodiac signs, the Pisces, the Cancer and the Scorpio. These sensual, dreamy and genderfree images are my contemporary version of Zodiac sign representation.
+          </div>
+
+          <div class="field-action">
+            Did you like it ?
+            <p>
+              <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/horoscope-01-designed-by-chiara-mendolia.png" alt="Scantatu, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/horoscope-02-designed-by-chiara-mendolia.png" alt="Scantatu, bottle" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/horoscope-03-designed-by-chiara-mendolia.png" alt="Scantatu, zoom" width="960" height="960" />
+            </li>
+             <li>
+              <img src="/horoscope-04-designed-by-chiara-mendolia.png" alt="Scantatu, logo" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/horoscope-05-designed-by-chiara-mendolia.png" alt="Scantatu, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/horoscope-06-designed-by-chiara-mendolia.png" alt="Scantatu, bottle" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/horoscope-07-designed-by-chiara-mendolia.png" alt="Scantatu, zoom" width="960" height="960" />
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

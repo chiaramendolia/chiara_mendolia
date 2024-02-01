@@ -51,6 +51,18 @@
     }
   }
 
+  .field-label {
+    font-size: 1rem;
+  }
+
+  h1 {
+    .region-content {
+      .home {
+        font-size: 15rem;
+      }
+    }
+  }
+
   h2 {
     margin-top: 1em;
     @media all and (max-width: 1199px) {
