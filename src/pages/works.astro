@@ -5,85 +5,82 @@ const posts = await Astro.glob("./works/*.mdx");
 ---
 
 <Layout title="My first steps into graphic design">
-  <Layout title="My first steps into graphic design">
-    <main class="region-content works">
-      <div class="region">
-        <div class="column column-first">
-          <div class="field-body">
-            <div class="field-label">
-              <span>Works</span>
-            </div>
-            <h1>My first steps into graphic design</h1>
-            <div class="field-heading">
-              <p>Downloading...</p>
-            </div>
-            <p>
-              During my 3 years in eracom, art and communication school in
-              Lausanne, and above, I learnt a lot about Swiss graphic design. I
-              also had the chance to get directly inspireed and impacted by
-              Japanese design style. You can see down below some graphic
-              composition I’ve done. I learnt to structure and organize the
-              space following the Swiss graphic grid but I also like to use my
-              illustrations to break it down. <br />
-              Branding work interest me a lot. I would say it’s very important to
-              me to design visuals that are meaningful and consistent with a project
-              or a brand’s direction. I also work a lot on illustrations work, which
-              is something that I especially like to include in my designs.
-            </p>
-
-            <div class="field-heading">
-              <p>
-                Branding. Visual communication. Illustration. Graphic
-                composition.
-              </p>
-            </div>
-
-            <div class="field-action">
-              <p>
-                <a href="/contact">Contact me now.</a>
-                <br />
-              </p>
-              Or see my works
-              <a href="/works" title="My works"> here</a>
-            </div>
+  <main class="region-content works">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+          <div class="field-label">
+            <span>Works</span>
           </div>
-        </div>
-        <div class="column colmun-second">
-          <div class="field-list">
-            <ul>
-              {
-                posts.map((post) => {
-                  return (
-                    <li>
-                      <div class="work-teaser">
-                        <div class="layout">
-                          <div class="layout_image">
-                            <div class="field-image">
-                              <img
-                                src={"/" + post.thumb}
-                                width="200"
-                                height="200"
-                                alt="Teaser of project : post.title"
-                              />
-                            </div>
-                          </div>
-                          <div class="layout_content">
-                            <h2>{post.title}</h2>
-                            <time>{post.year}</time>
-                            <a href={post.url} title="See this work">
-                              See this work
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  );
-                })
-              }
-            </ul>
+          <h1>My first steps into graphic design</h1>
+          <div class="field-heading">
+            <p>Downloading...</p>
+          </div>
+          <p>
+            During my 3 years in eracom, art and communication school in
+            Lausanne, and above, I learnt a lot about Swiss graphic design. I
+            also had the chance to get directly inspireed and impacted by
+            Japanese design style. You can see down below some graphic
+            composition I’ve done. I learnt to structure and organize the space
+            following the Swiss graphic grid but I also like to use my
+            illustrations to break it down. <br />
+            Branding work interest me a lot. I would say it’s very important to me
+            to design visuals that are meaningful and consistent with a project or
+            a brand’s direction. I also work a lot on illustrations work, which is
+            something that I especially like to include in my designs.
+          </p>
+
+          <div class="field-heading">
+            <p>
+              Branding. Visual communication. Illustration. Graphic composition.
+            </p>
+          </div>
+
+          <div class="field-action">
+            <p>
+              <a href="/contact">Contact me now.</a>
+              <br />
+            </p>
+            Or see my works
+            <a href="/works" title="My works"> here</a>
           </div>
         </div>
       </div>
-    </main>
-  </Layout>
+      <div class="column colmun-second">
+        <div class="field-list">
+          <ul>
+            {
+              posts.map((post) => {
+                return (
+                  <li>
+                    <div class="work-teaser">
+                      <div class="layout">
+                        <div class="layout_image">
+                          <div class="field-image">
+                            <img
+                              src={"/" + post.thumb}
+                              width="200"
+                              height="200"
+                              alt="Teaser of project : post.title"
+                            />
+                          </div>
+                        </div>
+                        <div class="layout_content">
+                          <h2>{post.title}</h2>
+                          <time>{post.year}</time>
+                          <a href={post.url} title="See this work">
+                            See this work
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
