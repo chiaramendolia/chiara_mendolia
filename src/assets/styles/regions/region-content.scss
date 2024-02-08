@@ -168,7 +168,8 @@
 }
 
 .region-content.about .region,
-.region-content.legals .region {
+.region-content.legals .region,
+.region-content.contact .region {
   .field-image {
     transform: scaleX(-1);
     img {
