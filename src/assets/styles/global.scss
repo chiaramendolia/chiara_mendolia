@@ -117,6 +117,10 @@ a {
 .region-content.works .region,
 .region-content.work .region,
 .region-content.contact .region {
-  flex-flow: row-reverse;
+  flex-flow: column;
+}
+
+.region-content.contact .region {
+  flex-flow: column-reverse;
 }
 // font-family: Space Grotesk Regular;
