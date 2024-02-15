@@ -21,8 +21,8 @@
       border-right: 1px solid black;
       border-bottom: 1px solid black;
       position: absolute;
-      bottom: -3rem;
-      right: 4rem;
+      bottom: -4.5rem;
+      right: -4.5rem;
     }
   }
   > *:not(:last-child) {
@@ -198,7 +198,9 @@
   .column-second {
     .field-body {
       p {
-        padding-bottom: 3rem;
+        &:not(:last-child) {
+          padding-bottom: 3rem;
+        }
         @media all and (max-width: 1199px) {
           font-size: 1.125rem;
         }
