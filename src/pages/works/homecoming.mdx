@@ -1,0 +1,62 @@
+export const title = "Homecoming";
+export const year = "2025";
+export const thumb = "teaser-homecoming-designed-by-chiara-mendolia.png";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <div class="field-label">
+            <span>Work</span>
+          </div>
+
+          <h1>
+             {title}
+          </h1>
+
+          <div class="field-time"><time>{year}</time></div>
+
+          <div class="field-heading">
+            Saltzone of Tainan, Taiwan.
+          </div>
+
+          <div>
+            Poster design for an exhibition of artists from the saline region of Tainan, Taiwan, in collaboration with the studio Idealform.co. The artists, returning to their hometown after journeys over-seas, showcase paintings, drawings, sculptures, and more, each filled with nostalgic memories and unique stories. This poster proposal was not selected.
+
+          </div>
+
+          <div class="field-action">
+            Did you like it ?
+            <p>
+              <a href="mailto:chiara@mendolia.ch" title="Contact me">
+                <span>Contact me now.</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+             <li>
+              <img src="/homecoming-01-designed-by-chiara-mendolia.png" alt="Homecoming, whole" width="960" height="960"/>
+            </li>
+            <li>
+              <img src="/homecoming-02-designed-by-chiara-mendolia.png" alt="Homecoming, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/homecoming-03-designed-by-chiara-mendolia.png" alt="Homecoming, zoom" width="960" height="960" />
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>

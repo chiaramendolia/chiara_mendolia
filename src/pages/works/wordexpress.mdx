@@ -1,0 +1,60 @@
+export const title = "Word Express";
+export const year = "2025";
+export const thumb = "teaser-wordexpress-designed-by-chiara-mendolia.png";
+
+import Layout from "../../layouts/Layout.astro";
+
+<Layout class="work" title={title}>
+  <main class="region-content work">
+    <div class="region">
+      <div class="column column-first">
+        <div class="field-body">
+
+          <div class="field-label">
+            <span>Work</span>
+          </div>
+
+          <h1>
+             {title}
+          </h1>
+
+          <div class="field-time"><time>{year}</time></div>
+
+          <div class="field-heading">
+           Train is arriving.
+          </div>
+
+          <div>
+             Bilingual logo for the Taiwanese editorial collective «字強號» / « Word Express » with the studio Idealform.co. Literally ‘Strong Character Label’, this name has been chosen for its wordplay expressing a fast train carrying language. This poster proposal was not selected.
+          </div>
+
+          <div class="field-action">
+            Did you like it ?
+            <p><a href="mailto:chiara@mendolia.ch" title="Contact me"><span>Contact me now.</span></a></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column colmun-second">
+        <div class="field-images">
+          <ul>
+            <li>
+              <img src="/wordexpress-01-designed-by-chiara-mendolia.png" alt="Periodt, zoom" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/wordexpress-02-designed-by-chiara-mendolia.png" alt="Periodt, contain" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/wordexpress-03-designed-by-chiara-mendolia.png" alt="Periodt, sketches" width="960" height="960" />
+            </li>
+            <li>
+              <img src="/wordexpress-04-designed-by-chiara-mendolia.png" alt="Periodt, box" width="960" height="960" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</Layout>
